@@ -9,5 +9,5 @@
 import Foundation
 
 struct AppState {
-	var speedrunsRepository: SpeedrunsRepository
+	var gamesRepository: GamesRepository
 }

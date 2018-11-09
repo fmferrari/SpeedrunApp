@@ -11,41 +11,41 @@ import RxSwift
 class SplashEventsHandler {
 	weak var navigation : SplashNavigation?
 	private let disposeBag: DisposeBag = DisposeBag ()
-	let fetchSpeedruns: FetchSpeedruns
+	let fetchGames: FetchGames
 
 	init (
-		fetchSpeedruns: FetchSpeedruns
-		) {
-		self.fetchSpeedruns = fetchSpeedruns
+		fetchGames: FetchGames
+	) {
+		self.fetchGames = fetchGames
 	}
 
 	func viewDidLoad() {
-		performSpeedrunsFetch()
+		performGamesFetch()
 	}
 
-	func performSpeedrunsFetch() {
-		fetchSpeedruns
+	func performGamesFetch() {
+		fetchGames
 			.execute()
 			.subscribe(
-				onNext: {[weak self] speedruns in
-					guard let state = self?.createState(withSpeedruns: speedruns) else { return }
+				onNext: {[weak self] games in
+					guard let state = self?.createState(withGames: games) else { return }
 					self?.navigation?.presentHome(for: state)
 				},
 				onError: { [weak self] _ in
 					self?.navigation?.presentInformationPopup(
 						title: "Ups!",
-						message: "There was an error loading speedruns. \n Press OK to try again!",
+						message: "There was an error loading games. \n Press OK to try again!",
 						animated: true,
 						action: {
-							self?.performSpeedrunsFetch()
+							self?.performGamesFetch()
 					}
 					)
 				}
 			).disposed(by: disposeBag)
 	}
 
-	func createState(withSpeedruns speedruns: [Speedrun]) -> AppState {
-		let speedrunsRepository = SpeedrunsRepository(speedruns: speedruns)
-		return AppState( speedrunsRepository: speedrunsRepository)
+	func createState(withGames games: [Game]) -> AppState {
+		let gamesRepository = GamesRepository(games: games)
+		return AppState( gamesRepository: gamesRepository)
 	}
 }

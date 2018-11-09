@@ -27,18 +27,27 @@
 		553BB94021960582003164FC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93B21960582003164FC /* Api.swift */; };
 		553BB94121960582003164FC /* RxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93C21960582003164FC /* RxApi.swift */; };
 		553BB94221960582003164FC /* SpeedrunApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 553BB93E21960582003164FC /* SpeedrunApi.plist */; };
-		553BB94621960652003164FC /* FetchSpeedrunsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */; };
-		553BB94921960722003164FC /* Speedrun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94821960722003164FC /* Speedrun.swift */; };
+		553BB94621960652003164FC /* FetchGamesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94521960652003164FC /* FetchGamesInteractor.swift */; };
+		553BB94921960722003164FC /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94821960722003164FC /* Game.swift */; };
 		553BB94C2196079C003164FC /* DictionaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94B2196079C003164FC /* DictionaryHelper.swift */; };
-		553BB94F2196083A003164FC /* SpeedrunsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94E2196083A003164FC /* SpeedrunsRepository.swift */; };
+		553BB94F2196083A003164FC /* GamesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94E2196083A003164FC /* GamesRepository.swift */; };
 		553BB9522196085B003164FC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9512196085B003164FC /* AppState.swift */; };
 		553BB95521960B61003164FC /* SplashEventsHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95421960B61003164FC /* SplashEventsHandlerTests.swift */; };
-		553BB95821960CC1003164FC /* SpeedrunFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95721960CC1003164FC /* SpeedrunFactory.swift */; };
+		553BB95821960CC1003164FC /* GameFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95721960CC1003164FC /* GameFactory.swift */; };
 		553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95A21960D5C003164FC /* SplashWireframeTests.swift */; };
-		553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */; };
+		553BB95F21960DBA003164FC /* FetchGamesInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95E21960DBA003164FC /* FetchGamesInteractorTests.swift */; };
 		553BB96221960E5E003164FC /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96121960E5E003164FC /* StubHelper.swift */; };
-		553BB96521960F92003164FC /* SpeedrunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96421960F92003164FC /* SpeedrunTests.swift */; };
-		553BB96721961581003164FC /* SpeedrunToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96621961581003164FC /* SpeedrunToDisplay.swift */; };
+		553BB96521960F92003164FC /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96421960F92003164FC /* GameTests.swift */; };
+		553BB96721961581003164FC /* GameToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96621961581003164FC /* GameToDisplay.swift */; };
+		553BB97121961BD3003164FC /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BB96921961BD2003164FC /* HomeViewController.xib */; };
+		553BB97221961BD3003164FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96A21961BD2003164FC /* HomeViewController.swift */; };
+		553BB97321961BD3003164FC /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96B21961BD2003164FC /* HomeWireframe.swift */; };
+		553BB97421961BD3003164FC /* GamesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96D21961BD2003164FC /* GamesCollectionView.swift */; };
+		553BB97521961BD3003164FC /* GamesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BB96E21961BD2003164FC /* GamesCollectionViewCell.xib */; };
+		553BB97621961BD3003164FC /* GamesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96F21961BD2003164FC /* GamesCollectionViewCell.swift */; };
+		553BB97721961BD3003164FC /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97021961BD2003164FC /* HomePresenter.swift */; };
+		553BB97921962F51003164FC /* HomeWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97821962F51003164FC /* HomeWireframeTests.swift */; };
+		553BB97C2196310E003164FC /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97B2196310E003164FC /* HomePresenterTests.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,18 +90,27 @@
 		553BB93B21960582003164FC /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		553BB93C21960582003164FC /* RxApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxApi.swift; sourceTree = "<group>"; };
 		553BB93E21960582003164FC /* SpeedrunApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpeedrunApi.plist; sourceTree = "<group>"; };
-		553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpeedrunsInteractor.swift; sourceTree = "<group>"; };
-		553BB94821960722003164FC /* Speedrun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedrun.swift; sourceTree = "<group>"; };
+		553BB94521960652003164FC /* FetchGamesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGamesInteractor.swift; sourceTree = "<group>"; };
+		553BB94821960722003164FC /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		553BB94B2196079C003164FC /* DictionaryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelper.swift; sourceTree = "<group>"; };
-		553BB94E2196083A003164FC /* SpeedrunsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunsRepository.swift; sourceTree = "<group>"; };
+		553BB94E2196083A003164FC /* GamesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesRepository.swift; sourceTree = "<group>"; };
 		553BB9512196085B003164FC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		553BB95421960B61003164FC /* SplashEventsHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashEventsHandlerTests.swift; sourceTree = "<group>"; };
-		553BB95721960CC1003164FC /* SpeedrunFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedrunFactory.swift; sourceTree = "<group>"; };
+		553BB95721960CC1003164FC /* GameFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameFactory.swift; sourceTree = "<group>"; };
 		553BB95A21960D5C003164FC /* SplashWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWireframeTests.swift; sourceTree = "<group>"; };
-		553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpeedrunsInteractorTests.swift; sourceTree = "<group>"; };
+		553BB95E21960DBA003164FC /* FetchGamesInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGamesInteractorTests.swift; sourceTree = "<group>"; };
 		553BB96121960E5E003164FC /* StubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubHelper.swift; sourceTree = "<group>"; };
-		553BB96421960F92003164FC /* SpeedrunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunTests.swift; sourceTree = "<group>"; };
-		553BB96621961581003164FC /* SpeedrunToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunToDisplay.swift; sourceTree = "<group>"; };
+		553BB96421960F92003164FC /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		553BB96621961581003164FC /* GameToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameToDisplay.swift; sourceTree = "<group>"; };
+		553BB96921961BD2003164FC /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		553BB96A21961BD2003164FC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		553BB96B21961BD2003164FC /* HomeWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		553BB96D21961BD2003164FC /* GamesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesCollectionView.swift; sourceTree = "<group>"; };
+		553BB96E21961BD2003164FC /* GamesCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GamesCollectionViewCell.xib; sourceTree = "<group>"; };
+		553BB96F21961BD2003164FC /* GamesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewCell.swift; sourceTree = "<group>"; };
+		553BB97021961BD2003164FC /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		553BB97821962F51003164FC /* HomeWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframeTests.swift; sourceTree = "<group>"; };
+		553BB97B2196310E003164FC /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +180,7 @@
 		5500FB3B2195F8DD0079B15C /* SpeedrunAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				553BB97A219630F0003164FC /* Presenters */,
 				553BB96321960F85003164FC /* Entities */,
 				553BB96021960E5E003164FC /* Helpers */,
 				553BB95C21960D9B003164FC /* Interactors */,
@@ -206,6 +225,7 @@
 		553BB92F21960191003164FC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				553BB96821961BD2003164FC /* Home */,
 				553BB93021960191003164FC /* Splash */,
 			);
 			path = Scenes;
@@ -251,7 +271,7 @@
 		553BB9442196063D003164FC /* DataFetchers */ = {
 			isa = PBXGroup;
 			children = (
-				553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */,
+				553BB94521960652003164FC /* FetchGamesInteractor.swift */,
 			);
 			path = DataFetchers;
 			sourceTree = "<group>";
@@ -259,8 +279,8 @@
 		553BB9472196070F003164FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				553BB94821960722003164FC /* Speedrun.swift */,
-				553BB96621961581003164FC /* SpeedrunToDisplay.swift */,
+				553BB94821960722003164FC /* Game.swift */,
+				553BB96621961581003164FC /* GameToDisplay.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -276,7 +296,7 @@
 		553BB94D21960827003164FC /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				553BB94E2196083A003164FC /* SpeedrunsRepository.swift */,
+				553BB94E2196083A003164FC /* GamesRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -300,7 +320,7 @@
 		553BB95621960CC1003164FC /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				553BB95721960CC1003164FC /* SpeedrunFactory.swift */,
+				553BB95721960CC1003164FC /* GameFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -309,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				553BB95A21960D5C003164FC /* SplashWireframeTests.swift */,
+				553BB97821962F51003164FC /* HomeWireframeTests.swift */,
 			);
 			path = Wireframes;
 			sourceTree = "<group>";
@@ -324,7 +345,7 @@
 		553BB95D21960DA5003164FC /* DataFetchers */ = {
 			isa = PBXGroup;
 			children = (
-				553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */,
+				553BB95E21960DBA003164FC /* FetchGamesInteractorTests.swift */,
 			);
 			path = DataFetchers;
 			sourceTree = "<group>";
@@ -340,9 +361,39 @@
 		553BB96321960F85003164FC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				553BB96421960F92003164FC /* SpeedrunTests.swift */,
+				553BB96421960F92003164FC /* GameTests.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		553BB96821961BD2003164FC /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				553BB96C21961BD2003164FC /* GamesCollectionView */,
+				553BB96921961BD2003164FC /* HomeViewController.xib */,
+				553BB96A21961BD2003164FC /* HomeViewController.swift */,
+				553BB96B21961BD2003164FC /* HomeWireframe.swift */,
+				553BB97021961BD2003164FC /* HomePresenter.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		553BB96C21961BD2003164FC /* GamesCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				553BB96D21961BD2003164FC /* GamesCollectionView.swift */,
+				553BB96E21961BD2003164FC /* GamesCollectionViewCell.xib */,
+				553BB96F21961BD2003164FC /* GamesCollectionViewCell.swift */,
+			);
+			path = GamesCollectionView;
+			sourceTree = "<group>";
+		};
+		553BB97A219630F0003164FC /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				553BB97B2196310E003164FC /* HomePresenterTests.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		9E671DC5F71FDF39624CE1EE /* Pods */ = {
@@ -452,7 +503,9 @@
 			files = (
 				5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */,
 				553BB93821960192003164FC /* SplashViewController.xib in Resources */,
+				553BB97121961BD3003164FC /* HomeViewController.xib in Resources */,
 				5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */,
+				553BB97521961BD3003164FC /* GamesCollectionViewCell.xib in Resources */,
 				553BB94221960582003164FC /* SpeedrunApi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -477,6 +530,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
@@ -485,6 +539,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
@@ -584,18 +639,23 @@
 				553BB93721960192003164FC /* SplashViewController.swift in Sources */,
 				553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */,
 				553BB94121960582003164FC /* RxApi.swift in Sources */,
-				553BB96721961581003164FC /* SpeedrunToDisplay.swift in Sources */,
+				553BB96721961581003164FC /* GameToDisplay.swift in Sources */,
+				553BB97321961BD3003164FC /* HomeWireframe.swift in Sources */,
+				553BB97221961BD3003164FC /* HomeViewController.swift in Sources */,
+				553BB97721961BD3003164FC /* HomePresenter.swift in Sources */,
 				553BB93F21960582003164FC /* SpeedrunApi.swift in Sources */,
-				553BB94621960652003164FC /* FetchSpeedrunsInteractor.swift in Sources */,
+				553BB94621960652003164FC /* FetchGamesInteractor.swift in Sources */,
 				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
 				553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */,
 				5500FB282195F8DC0079B15C /* AppDelegate.swift in Sources */,
 				553BB9522196085B003164FC /* AppState.swift in Sources */,
 				553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */,
-				553BB94F2196083A003164FC /* SpeedrunsRepository.swift in Sources */,
+				553BB97421961BD3003164FC /* GamesCollectionView.swift in Sources */,
+				553BB94F2196083A003164FC /* GamesRepository.swift in Sources */,
 				553BB93621960192003164FC /* SplashWireframe.swift in Sources */,
-				553BB94921960722003164FC /* Speedrun.swift in Sources */,
+				553BB94921960722003164FC /* Game.swift in Sources */,
 				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
+				553BB97621961BD3003164FC /* GamesCollectionViewCell.swift in Sources */,
 				553BB94021960582003164FC /* Api.swift in Sources */,
 				553BB9272195FF35003164FC /* NavigationBar.swift in Sources */,
 				553BB94C2196079C003164FC /* DictionaryHelper.swift in Sources */,
@@ -608,10 +668,12 @@
 			files = (
 				553BB95521960B61003164FC /* SplashEventsHandlerTests.swift in Sources */,
 				553BB96221960E5E003164FC /* StubHelper.swift in Sources */,
-				553BB96521960F92003164FC /* SpeedrunTests.swift in Sources */,
+				553BB97921962F51003164FC /* HomeWireframeTests.swift in Sources */,
+				553BB96521960F92003164FC /* GameTests.swift in Sources */,
 				553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */,
-				553BB95821960CC1003164FC /* SpeedrunFactory.swift in Sources */,
-				553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */,
+				553BB95821960CC1003164FC /* GameFactory.swift in Sources */,
+				553BB95F21960DBA003164FC /* FetchGamesInteractorTests.swift in Sources */,
+				553BB97C2196310E003164FC /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 //
-//  Speedrun.swift
+//  Game.swift
 //  SpeedrunApp
 //
 //  Created by Felipe Ferrari on 09/11/2018.
@@ -8,17 +8,17 @@
 
 import Foundation
 
-enum SpeedrunParseError: Error {
+enum GameParseError: Error {
 	case invalidDictionary
 }
 
-struct Speedrun {
+struct Game {
 	let id: String
 	let name: String
 	let logo: URL
 }
 
-extension Speedrun: Hashable {
+extension Game: Hashable {
 	init(fromDictionary dictionary: [String : Any]) throws {
 		guard let id = try? dictionary.valueOf("id") as String,
 			  let name = try? dictionary.valueOf("abbreviation") as String,
@@ -26,7 +26,7 @@ extension Speedrun: Hashable {
 			  let logoDictionary = try? assetsDictionary.valueOf("logo") as [String: Any],
 			  let logoURLString = try? logoDictionary.valueOf("uri") as String,
 			  let logoURL = URL(string: logoURLString)
-			else { throw SpeedrunParseError.invalidDictionary }
+			else { throw GameParseError.invalidDictionary }
 		self.id = id
 		self.name = name
 		self.logo = logoURL
@@ -40,7 +40,7 @@ extension Speedrun: Hashable {
 		]
 	}
 
-	static func ==(lhs: Speedrun, rhs: Speedrun) -> Bool {
+	static func ==(lhs: Game, rhs: Game) -> Bool {
 		return lhs.id == rhs.id
 	}
 }

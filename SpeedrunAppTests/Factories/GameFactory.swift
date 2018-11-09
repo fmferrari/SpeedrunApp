@@ -1,5 +1,5 @@
 //
-//  SpeedrunFactory.swift
+//  GameFactory.swift
 //  SpeedrunAppTests
 //
 //  Created by Felipe Ferrari on 09/11/2018.
@@ -11,13 +11,13 @@ import Foundation
 
 @testable import SpeedrunApp
 
-class SpeedrunFactory {
-	static func speedrun (
+class GameFactory {
+	static func game (
 		id: String = "abc123",
 		name: String = "aName",
 		logo: URL = URL(string: "https://www.speedrun.com/themes/fishy/logo.png")!
-	) -> Speedrun {
-		return Speedrun(
+	) -> Game {
+		return Game(
 			id: id,
 			name: name,
 			logo: logo

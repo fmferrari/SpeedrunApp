@@ -1,5 +1,5 @@
 //
-//  SpeedrunRepository.swift
+//  GamesRepository.swift
 //  SpeedrunApp
 //
 //  Created by Felipe Ferrari on 09/11/2018.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-struct SpeedrunsRepository {
-	var speedruns : [Speedrun]
+struct GamesRepository {
+	var games : [Game]
 }

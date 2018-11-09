@@ -18,27 +18,27 @@ class SplashEventsHandlerTests: QuickSpec {
 	override func spec() {
 
 		context("when the eventsHandler is created") {
-			let (navigation, fetchSpeedruns, eventsHandler) = createEventsHandler()
+			let (navigation, fetchGames, eventsHandler) = createEventsHandler()
 
 			context("when the view is loaded") {
 				beforeEach{ eventsHandler.viewDidLoad() }
 
 				it ("calls the fetcher") {
-					expect(fetchSpeedruns.executeWasCalled).to(beTrue())
+					expect(fetchGames.executeWasCalled).to(beTrue())
 				}
 
 				context ("when the fetcher responds successfully") {
 					beforeEach {
-						fetchSpeedruns.speedrunsToReturnObserver.onNext([SpeedrunFactory.speedrun()])
+						fetchGames.gamesToReturnObserver.onNext([GameFactory.game()])
 					}
 
-					it ("tells navigation to present home with an app state containing fetched speedruns") {
-						expect (navigation.state?.speedrunsRepository.speedruns.first?.id) == SpeedrunFactory.speedrun().id
+					it ("tells navigation to present home with an app state containing fetched games") {
+						expect (navigation.state?.gamesRepository.games.first?.id) == GameFactory.game().id
 					}
 				}
 
 				context ("when the fetcher has an error") {
-					beforeEach { fetchSpeedruns.speedrunsToReturnObserver.onError(NSError()) }
+					beforeEach { fetchGames.gamesToReturnObserver.onError(NSError()) }
 
 					it("shows the error popup") {
 						expect (navigation.popupWasShownWithAction).notTo(beNil())
@@ -46,12 +46,12 @@ class SplashEventsHandlerTests: QuickSpec {
 
 					context("when the user presses the ok button") {
 						beforeEach {
-							fetchSpeedruns.executeWasCalled = false
+							fetchGames.executeWasCalled = false
 							navigation.popupWasShownWithAction?()
 						}
 
 						it ("calls the fetcher again") {
-							expect(fetchSpeedruns.executeWasCalled).to(beTrue())
+							expect(fetchGames.executeWasCalled).to(beTrue())
 						}
 					}
 
@@ -64,15 +64,14 @@ class SplashEventsHandlerTests: QuickSpec {
 	func createEventsHandler() ->
 		(
 		SplashNavigationNavigationMock,
-		FetchSpeedrunsMock, SplashEventsHandler
-		) {
+		FetchGamesMock, SplashEventsHandler
+	) {
 			let navigation = SplashNavigationNavigationMock()
-			let fetchSpeedruns = FetchSpeedrunsMock()
-			let eventsHandler =
-				SplashEventsHandler(fetchSpeedruns: fetchSpeedruns)
+			let fetchGames = FetchGamesMock()
+			let eventsHandler = SplashEventsHandler(fetchGames: fetchGames)
 			eventsHandler.navigation = navigation
 
-			return (navigation, fetchSpeedruns, eventsHandler)
+			return (navigation, fetchGames, eventsHandler)
 	}
 }
 
@@ -96,21 +95,21 @@ class SplashNavigationNavigationMock: SplashNavigation {
 	}
 }
 
-class FetchSpeedrunsMock: FetchSpeedruns {
+class FetchGamesMock: FetchGames {
 	var executeWasCalled: Bool = false
-	var speedrunsToReturnObserver: AnyObserver<[Speedrun]>!
-	private var _speedrunsToReturnObservable: Observable<[Speedrun]>!
+	var gamesToReturnObserver: AnyObserver<[Game]>!
+	private var _gamesToReturnObservable: Observable<[Game]>!
 
 	init () {
-		_speedrunsToReturnObservable = Observable.create { observer in
-			self.speedrunsToReturnObserver = observer
+		_gamesToReturnObservable = Observable.create { observer in
+			self.gamesToReturnObserver = observer
 			return Disposables.create ()
 		}
 	}
 
-	func execute() -> Observable<[Speedrun]> {
+	func execute() -> Observable<[Game]> {
 		executeWasCalled = true
-		return _speedrunsToReturnObservable
+		return _gamesToReturnObservable
 	}
 }
 

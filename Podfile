@@ -7,6 +7,7 @@ target 'SpeedrunApp' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'SpeedrunAppTests' do
 	  inherit! :search_paths

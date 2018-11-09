@@ -23,7 +23,7 @@ class SplashWireframe: Wireframe {
 
 	required init(navigation: Navigation) {
 		self.splashEventsHandler = SplashEventsHandler (
-			fetchSpeedruns: FetchSpeedrunsInteractor.withDefaultApi
+			fetchGames: FetchGamesInteractor.withDefaultApi
 		)
 
 		let splashView = SplashViewController()
@@ -38,6 +38,7 @@ class SplashWireframe: Wireframe {
 
 extension SplashWireframe: SplashNavigation {
 	public func presentHome (for state: AppState) {
-
+		let homeWireframe = HomeWireframe (navigation: navigation, state: state)
+		try? homeWireframe.setAsRootWireframe(inNavigation: true)
 	}
 }
