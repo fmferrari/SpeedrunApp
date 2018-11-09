@@ -9,14 +9,22 @@
 import UIKit
 
 protocol SplashNavigation: class {
-
+	func presentHome( for state: AppState )
+	func presentInformationPopup(
+		title: String?,
+		message: String,
+		animated: Bool,
+		action: (() -> Void)?
+	)
 }
 
 class SplashWireframe: Wireframe {
 	let splashEventsHandler: SplashEventsHandler
 
 	required init(navigation: Navigation) {
-		self.splashEventsHandler = SplashEventsHandler ()
+		self.splashEventsHandler = SplashEventsHandler (
+			fetchSpeedruns: FetchSpeedrunsInteractor.withDefaultApi
+		)
 
 		let splashView = SplashViewController()
 
@@ -29,5 +37,7 @@ class SplashWireframe: Wireframe {
 }
 
 extension SplashWireframe: SplashNavigation {
+	public func presentHome (for state: AppState) {
 
+	}
 }

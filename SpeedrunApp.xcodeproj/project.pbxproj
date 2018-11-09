@@ -24,6 +24,21 @@
 		553BB93621960192003164FC /* SplashWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93221960191003164FC /* SplashWireframe.swift */; };
 		553BB93721960192003164FC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93321960191003164FC /* SplashViewController.swift */; };
 		553BB93821960192003164FC /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BB93421960191003164FC /* SplashViewController.xib */; };
+		553BB93F21960582003164FC /* SpeedrunApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93A21960582003164FC /* SpeedrunApi.swift */; };
+		553BB94021960582003164FC /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93B21960582003164FC /* Api.swift */; };
+		553BB94121960582003164FC /* RxApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93C21960582003164FC /* RxApi.swift */; };
+		553BB94221960582003164FC /* SpeedrunApi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 553BB93E21960582003164FC /* SpeedrunApi.plist */; };
+		553BB94621960652003164FC /* FetchSpeedrunsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */; };
+		553BB94921960722003164FC /* Speedrun.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94821960722003164FC /* Speedrun.swift */; };
+		553BB94C2196079C003164FC /* DictionaryHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94B2196079C003164FC /* DictionaryHelper.swift */; };
+		553BB94F2196083A003164FC /* SpeedrunsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB94E2196083A003164FC /* SpeedrunsRepository.swift */; };
+		553BB9522196085B003164FC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9512196085B003164FC /* AppState.swift */; };
+		553BB95521960B61003164FC /* SplashEventsHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95421960B61003164FC /* SplashEventsHandlerTests.swift */; };
+		553BB95821960CC1003164FC /* SpeedrunFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95721960CC1003164FC /* SpeedrunFactory.swift */; };
+		553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95A21960D5C003164FC /* SplashWireframeTests.swift */; };
+		553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */; };
+		553BB96221960E5E003164FC /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96121960E5E003164FC /* StubHelper.swift */; };
+		553BB96521960F92003164FC /* SpeedrunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96421960F92003164FC /* SpeedrunTests.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +78,21 @@
 		553BB93221960191003164FC /* SplashWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWireframe.swift; sourceTree = "<group>"; };
 		553BB93321960191003164FC /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		553BB93421960191003164FC /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
+		553BB93A21960582003164FC /* SpeedrunApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedrunApi.swift; sourceTree = "<group>"; };
+		553BB93B21960582003164FC /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		553BB93C21960582003164FC /* RxApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxApi.swift; sourceTree = "<group>"; };
+		553BB93E21960582003164FC /* SpeedrunApi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SpeedrunApi.plist; sourceTree = "<group>"; };
+		553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpeedrunsInteractor.swift; sourceTree = "<group>"; };
+		553BB94821960722003164FC /* Speedrun.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Speedrun.swift; sourceTree = "<group>"; };
+		553BB94B2196079C003164FC /* DictionaryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryHelper.swift; sourceTree = "<group>"; };
+		553BB94E2196083A003164FC /* SpeedrunsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunsRepository.swift; sourceTree = "<group>"; };
+		553BB9512196085B003164FC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		553BB95421960B61003164FC /* SplashEventsHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashEventsHandlerTests.swift; sourceTree = "<group>"; };
+		553BB95721960CC1003164FC /* SpeedrunFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeedrunFactory.swift; sourceTree = "<group>"; };
+		553BB95A21960D5C003164FC /* SplashWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashWireframeTests.swift; sourceTree = "<group>"; };
+		553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpeedrunsInteractorTests.swift; sourceTree = "<group>"; };
+		553BB96121960E5E003164FC /* StubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubHelper.swift; sourceTree = "<group>"; };
+		553BB96421960F92003164FC /* SpeedrunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunTests.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +141,13 @@
 		5500FB262195F8DC0079B15C /* SpeedrunApp */ = {
 			isa = PBXGroup;
 			children = (
+				553BB9502196084D003164FC /* States */,
+				553BB94D21960827003164FC /* Repositories */,
+				553BB94A21960786003164FC /* Helpers */,
+				553BB9472196070F003164FC /* Entities */,
+				553BB94321960635003164FC /* Interactors */,
+				553BB93921960582003164FC /* Api */,
+				553BB93D21960582003164FC /* Config */,
 				553BB92C2195FFFF003164FC /* Styles */,
 				553BB91C2195FF35003164FC /* Navigation */,
 				553BB92F21960191003164FC /* Scenes */,
@@ -125,6 +162,12 @@
 		5500FB3B2195F8DD0079B15C /* SpeedrunAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				553BB96321960F85003164FC /* Entities */,
+				553BB96021960E5E003164FC /* Helpers */,
+				553BB95C21960D9B003164FC /* Interactors */,
+				553BB95921960D4C003164FC /* Wireframes */,
+				553BB95621960CC1003164FC /* Factories */,
+				553BB95321960B3A003164FC /* EventsHandlers */,
 				5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */,
 				5500FB3E2195F8DD0079B15C /* Info.plist */,
 			);
@@ -178,6 +221,128 @@
 				553BB93421960191003164FC /* SplashViewController.xib */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		553BB93921960582003164FC /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				553BB93A21960582003164FC /* SpeedrunApi.swift */,
+				553BB93B21960582003164FC /* Api.swift */,
+				553BB93C21960582003164FC /* RxApi.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		553BB93D21960582003164FC /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				553BB93E21960582003164FC /* SpeedrunApi.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		553BB94321960635003164FC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				553BB9442196063D003164FC /* DataFetchers */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		553BB9442196063D003164FC /* DataFetchers */ = {
+			isa = PBXGroup;
+			children = (
+				553BB94521960652003164FC /* FetchSpeedrunsInteractor.swift */,
+			);
+			path = DataFetchers;
+			sourceTree = "<group>";
+		};
+		553BB9472196070F003164FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				553BB94821960722003164FC /* Speedrun.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		553BB94A21960786003164FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				553BB94B2196079C003164FC /* DictionaryHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		553BB94D21960827003164FC /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				553BB94E2196083A003164FC /* SpeedrunsRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		553BB9502196084D003164FC /* States */ = {
+			isa = PBXGroup;
+			children = (
+				553BB9512196085B003164FC /* AppState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
+		553BB95321960B3A003164FC /* EventsHandlers */ = {
+			isa = PBXGroup;
+			children = (
+				553BB95421960B61003164FC /* SplashEventsHandlerTests.swift */,
+			);
+			path = EventsHandlers;
+			sourceTree = "<group>";
+		};
+		553BB95621960CC1003164FC /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				553BB95721960CC1003164FC /* SpeedrunFactory.swift */,
+			);
+			path = Factories;
+			sourceTree = "<group>";
+		};
+		553BB95921960D4C003164FC /* Wireframes */ = {
+			isa = PBXGroup;
+			children = (
+				553BB95A21960D5C003164FC /* SplashWireframeTests.swift */,
+			);
+			path = Wireframes;
+			sourceTree = "<group>";
+		};
+		553BB95C21960D9B003164FC /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				553BB95D21960DA5003164FC /* DataFetchers */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		553BB95D21960DA5003164FC /* DataFetchers */ = {
+			isa = PBXGroup;
+			children = (
+				553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */,
+			);
+			path = DataFetchers;
+			sourceTree = "<group>";
+		};
+		553BB96021960E5E003164FC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				553BB96121960E5E003164FC /* StubHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		553BB96321960F85003164FC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				553BB96421960F92003164FC /* SpeedrunTests.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		9E671DC5F71FDF39624CE1EE /* Pods */ = {
@@ -288,6 +453,7 @@
 				5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */,
 				553BB93821960192003164FC /* SplashViewController.xib in Resources */,
 				5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */,
+				553BB94221960582003164FC /* SpeedrunApi.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,13 +583,21 @@
 				553BB93521960192003164FC /* SplashEventsHandler.swift in Sources */,
 				553BB93721960192003164FC /* SplashViewController.swift in Sources */,
 				553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */,
+				553BB94121960582003164FC /* RxApi.swift in Sources */,
+				553BB93F21960582003164FC /* SpeedrunApi.swift in Sources */,
+				553BB94621960652003164FC /* FetchSpeedrunsInteractor.swift in Sources */,
 				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
 				553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */,
 				5500FB282195F8DC0079B15C /* AppDelegate.swift in Sources */,
+				553BB9522196085B003164FC /* AppState.swift in Sources */,
 				553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */,
+				553BB94F2196083A003164FC /* SpeedrunsRepository.swift in Sources */,
 				553BB93621960192003164FC /* SplashWireframe.swift in Sources */,
+				553BB94921960722003164FC /* Speedrun.swift in Sources */,
 				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
+				553BB94021960582003164FC /* Api.swift in Sources */,
 				553BB9272195FF35003164FC /* NavigationBar.swift in Sources */,
+				553BB94C2196079C003164FC /* DictionaryHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,6 +605,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553BB95521960B61003164FC /* SplashEventsHandlerTests.swift in Sources */,
+				553BB96221960E5E003164FC /* StubHelper.swift in Sources */,
+				553BB96521960F92003164FC /* SpeedrunTests.swift in Sources */,
+				553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */,
+				553BB95821960CC1003164FC /* SpeedrunFactory.swift in Sources */,
+				553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */,
 				5500FB3D2195F8DD0079B15C /* SpeedrunAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
