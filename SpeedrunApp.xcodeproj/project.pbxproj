@@ -20,6 +20,10 @@
 		553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9232195FF35003164FC /* ObservableViewController.swift */; };
 		553BB92B2195FF35003164FC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9242195FF35003164FC /* BaseNavigationController.swift */; };
 		553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB92D2195FFFF003164FC /* AppStyle.swift */; };
+		553BB93521960192003164FC /* SplashEventsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93121960191003164FC /* SplashEventsHandler.swift */; };
+		553BB93621960192003164FC /* SplashWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93221960191003164FC /* SplashWireframe.swift */; };
+		553BB93721960192003164FC /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB93321960191003164FC /* SplashViewController.swift */; };
+		553BB93821960192003164FC /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BB93421960191003164FC /* SplashViewController.xib */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +59,10 @@
 		553BB9232195FF35003164FC /* ObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
 		553BB9242195FF35003164FC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		553BB92D2195FFFF003164FC /* AppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
+		553BB93121960191003164FC /* SplashEventsHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashEventsHandler.swift; sourceTree = "<group>"; };
+		553BB93221960191003164FC /* SplashWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashWireframe.swift; sourceTree = "<group>"; };
+		553BB93321960191003164FC /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		553BB93421960191003164FC /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +113,7 @@
 			children = (
 				553BB92C2195FFFF003164FC /* Styles */,
 				553BB91C2195FF35003164FC /* Navigation */,
+				553BB92F21960191003164FC /* Scenes */,
 				5500FB272195F8DC0079B15C /* AppDelegate.swift */,
 				5500FB2E2195F8DD0079B15C /* Assets.xcassets */,
 				5500FB302195F8DD0079B15C /* LaunchScreen.storyboard */,
@@ -150,6 +159,25 @@
 				553BB92D2195FFFF003164FC /* AppStyle.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		553BB92F21960191003164FC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				553BB93021960191003164FC /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		553BB93021960191003164FC /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				553BB93121960191003164FC /* SplashEventsHandler.swift */,
+				553BB93221960191003164FC /* SplashWireframe.swift */,
+				553BB93321960191003164FC /* SplashViewController.swift */,
+				553BB93421960191003164FC /* SplashViewController.xib */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 		9E671DC5F71FDF39624CE1EE /* Pods */ = {
@@ -258,6 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */,
+				553BB93821960192003164FC /* SplashViewController.xib in Resources */,
 				5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,11 +414,14 @@
 			files = (
 				553BB92B2195FF35003164FC /* BaseNavigationController.swift in Sources */,
 				553BB9262195FF35003164FC /* Navigation.swift in Sources */,
+				553BB93521960192003164FC /* SplashEventsHandler.swift in Sources */,
+				553BB93721960192003164FC /* SplashViewController.swift in Sources */,
 				553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */,
 				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
 				553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */,
 				5500FB282195F8DC0079B15C /* AppDelegate.swift in Sources */,
 				553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */,
+				553BB93621960192003164FC /* SplashWireframe.swift in Sources */,
 				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
 				553BB9272195FF35003164FC /* NavigationBar.swift in Sources */,
 			);
