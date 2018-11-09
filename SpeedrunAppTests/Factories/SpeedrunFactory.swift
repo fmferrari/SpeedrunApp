@@ -13,10 +13,14 @@ import Foundation
 
 class SpeedrunFactory {
 	static func speedrun (
-		id: String = "abc123"
+		id: String = "abc123",
+		name: String = "aName",
+		logo: URL = URL(string: "https://www.speedrun.com/themes/fishy/logo.png")!
 	) -> Speedrun {
 		return Speedrun(
-			id: id
+			id: id,
+			name: name,
+			logo: logo
 		)
 	}
 }

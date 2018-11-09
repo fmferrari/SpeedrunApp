@@ -20,6 +20,8 @@ class SpeedrunTests: QuickSpec {
 				let speedrun = try! Speedrun (fromDictionary: speedrunDictionary)
 
 				expect(speedrun.id) == "abc123"
+				expect(speedrun.name) == "aName"
+				expect(speedrun.logo.absoluteString) == "https://www.speedrun.com/themes/fishy/logo.png"
 			}
 		}
 
@@ -30,6 +32,14 @@ class SpeedrunTests: QuickSpec {
 				let speedrunDictionary = speedrun.toDictionary()
 
 				expect (speedrunDictionary["id"] as? String) == "abc123"
+				expect (speedrunDictionary["abbreviation"] as? String) == "aName"
+
+				if  let assetsDictionary = try? speedrunDictionary.valueOf("assets") as [String: Any],
+					let logoDictionary = try? assetsDictionary.valueOf("logo") as [String: Any],
+					let logoURLString = try? logoDictionary.valueOf("uri") as String
+				{
+					expect (logoURLString) == "https://www.speedrun.com/themes/fishy/logo.png"
+				}
 			}
 		}
 	}

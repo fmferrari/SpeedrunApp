@@ -11,7 +11,6 @@
 		5500FB282195F8DC0079B15C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5500FB272195F8DC0079B15C /* AppDelegate.swift */; };
 		5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5500FB2E2195F8DD0079B15C /* Assets.xcassets */; };
 		5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5500FB302195F8DD0079B15C /* LaunchScreen.storyboard */; };
-		5500FB3D2195F8DD0079B15C /* SpeedrunAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */; };
 		553BB9252195FF35003164FC /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91D2195FF35003164FC /* Wireframe.swift */; };
 		553BB9262195FF35003164FC /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91E2195FF35003164FC /* Navigation.swift */; };
 		553BB9272195FF35003164FC /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91F2195FF35003164FC /* NavigationBar.swift */; };
@@ -39,6 +38,7 @@
 		553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */; };
 		553BB96221960E5E003164FC /* StubHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96121960E5E003164FC /* StubHelper.swift */; };
 		553BB96521960F92003164FC /* SpeedrunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96421960F92003164FC /* SpeedrunTests.swift */; };
+		553BB96721961581003164FC /* SpeedrunToDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB96621961581003164FC /* SpeedrunToDisplay.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,7 +64,6 @@
 		5500FB312195F8DD0079B15C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5500FB332195F8DD0079B15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5500FB382195F8DD0079B15C /* SpeedrunAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedrunAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunAppTests.swift; sourceTree = "<group>"; };
 		5500FB3E2195F8DD0079B15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		553BB91D2195FF35003164FC /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 		553BB91E2195FF35003164FC /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
@@ -93,6 +92,7 @@
 		553BB95E21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchSpeedrunsInteractorTests.swift; sourceTree = "<group>"; };
 		553BB96121960E5E003164FC /* StubHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubHelper.swift; sourceTree = "<group>"; };
 		553BB96421960F92003164FC /* SpeedrunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunTests.swift; sourceTree = "<group>"; };
+		553BB96621961581003164FC /* SpeedrunToDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunToDisplay.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -168,7 +168,6 @@
 				553BB95921960D4C003164FC /* Wireframes */,
 				553BB95621960CC1003164FC /* Factories */,
 				553BB95321960B3A003164FC /* EventsHandlers */,
-				5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */,
 				5500FB3E2195F8DD0079B15C /* Info.plist */,
 			);
 			path = SpeedrunAppTests;
@@ -261,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				553BB94821960722003164FC /* Speedrun.swift */,
+				553BB96621961581003164FC /* SpeedrunToDisplay.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -584,6 +584,7 @@
 				553BB93721960192003164FC /* SplashViewController.swift in Sources */,
 				553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */,
 				553BB94121960582003164FC /* RxApi.swift in Sources */,
+				553BB96721961581003164FC /* SpeedrunToDisplay.swift in Sources */,
 				553BB93F21960582003164FC /* SpeedrunApi.swift in Sources */,
 				553BB94621960652003164FC /* FetchSpeedrunsInteractor.swift in Sources */,
 				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
@@ -611,7 +612,6 @@
 				553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */,
 				553BB95821960CC1003164FC /* SpeedrunFactory.swift in Sources */,
 				553BB95F21960DBA003164FC /* FetchSpeedrunsInteractorTests.swift in Sources */,
-				5500FB3D2195F8DD0079B15C /* SpeedrunAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

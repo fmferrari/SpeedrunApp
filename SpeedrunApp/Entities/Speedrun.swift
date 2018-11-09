@@ -14,18 +14,29 @@ enum SpeedrunParseError: Error {
 
 struct Speedrun {
 	let id: String
+	let name: String
+	let logo: URL
 }
 
 extension Speedrun: Hashable {
 	init(fromDictionary dictionary: [String : Any]) throws {
-		guard let id = try? dictionary.valueOf("id") as String
+		guard let id = try? dictionary.valueOf("id") as String,
+			  let name = try? dictionary.valueOf("abbreviation") as String,
+			  let assetsDictionary = try? dictionary.valueOf("assets") as [String: Any],
+			  let logoDictionary = try? assetsDictionary.valueOf("logo") as [String: Any],
+			  let logoURLString = try? logoDictionary.valueOf("uri") as String,
+			  let logoURL = URL(string: logoURLString)
 			else { throw SpeedrunParseError.invalidDictionary }
 		self.id = id
+		self.name = name
+		self.logo = logoURL
 	}
 
 	func toDictionary() -> [String : Any] {
 		return [
-			"id": id
+			"id": id,
+			"abbreviation": name,
+			"assets" : ["logo" : ["uri": logo.absoluteString]]
 		]
 	}
 
