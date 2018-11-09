@@ -12,6 +12,14 @@
 		5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5500FB2E2195F8DD0079B15C /* Assets.xcassets */; };
 		5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5500FB302195F8DD0079B15C /* LaunchScreen.storyboard */; };
 		5500FB3D2195F8DD0079B15C /* SpeedrunAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */; };
+		553BB9252195FF35003164FC /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91D2195FF35003164FC /* Wireframe.swift */; };
+		553BB9262195FF35003164FC /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91E2195FF35003164FC /* Navigation.swift */; };
+		553BB9272195FF35003164FC /* NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB91F2195FF35003164FC /* NavigationBar.swift */; };
+		553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9212195FF35003164FC /* ObservableViewWireframe.swift */; };
+		553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9222195FF35003164FC /* ObserverPresenter.swift */; };
+		553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9232195FF35003164FC /* ObservableViewController.swift */; };
+		553BB92B2195FF35003164FC /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9242195FF35003164FC /* BaseNavigationController.swift */; };
+		553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB92D2195FFFF003164FC /* AppStyle.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +47,14 @@
 		5500FB382195F8DD0079B15C /* SpeedrunAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeedrunAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5500FB3C2195F8DD0079B15C /* SpeedrunAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedrunAppTests.swift; sourceTree = "<group>"; };
 		5500FB3E2195F8DD0079B15C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		553BB91D2195FF35003164FC /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
+		553BB91E2195FF35003164FC /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		553BB91F2195FF35003164FC /* NavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationBar.swift; sourceTree = "<group>"; };
+		553BB9212195FF35003164FC /* ObservableViewWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableViewWireframe.swift; sourceTree = "<group>"; };
+		553BB9222195FF35003164FC /* ObserverPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObserverPresenter.swift; sourceTree = "<group>"; };
+		553BB9232195FF35003164FC /* ObservableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservableViewController.swift; sourceTree = "<group>"; };
+		553BB9242195FF35003164FC /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		553BB92D2195FFFF003164FC /* AppStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStyle.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +103,8 @@
 		5500FB262195F8DC0079B15C /* SpeedrunApp */ = {
 			isa = PBXGroup;
 			children = (
+				553BB92C2195FFFF003164FC /* Styles */,
+				553BB91C2195FF35003164FC /* Navigation */,
 				5500FB272195F8DC0079B15C /* AppDelegate.swift */,
 				5500FB2E2195F8DD0079B15C /* Assets.xcassets */,
 				5500FB302195F8DD0079B15C /* LaunchScreen.storyboard */,
@@ -102,6 +120,36 @@
 				5500FB3E2195F8DD0079B15C /* Info.plist */,
 			);
 			path = SpeedrunAppTests;
+			sourceTree = "<group>";
+		};
+		553BB91C2195FF35003164FC /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				553BB9202195FF35003164FC /* ObservableView */,
+				553BB91D2195FF35003164FC /* Wireframe.swift */,
+				553BB91E2195FF35003164FC /* Navigation.swift */,
+				553BB91F2195FF35003164FC /* NavigationBar.swift */,
+				553BB9242195FF35003164FC /* BaseNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		553BB9202195FF35003164FC /* ObservableView */ = {
+			isa = PBXGroup;
+			children = (
+				553BB9212195FF35003164FC /* ObservableViewWireframe.swift */,
+				553BB9222195FF35003164FC /* ObserverPresenter.swift */,
+				553BB9232195FF35003164FC /* ObservableViewController.swift */,
+			);
+			path = ObservableView;
+			sourceTree = "<group>";
+		};
+		553BB92C2195FFFF003164FC /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				553BB92D2195FFFF003164FC /* AppStyle.swift */,
+			);
+			path = Styles;
 			sourceTree = "<group>";
 		};
 		9E671DC5F71FDF39624CE1EE /* Pods */ = {
@@ -335,7 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				553BB92B2195FF35003164FC /* BaseNavigationController.swift in Sources */,
+				553BB9262195FF35003164FC /* Navigation.swift in Sources */,
+				553BB92A2195FF35003164FC /* ObservableViewController.swift in Sources */,
+				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
+				553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */,
 				5500FB282195F8DC0079B15C /* AppDelegate.swift in Sources */,
+				553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */,
+				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
+				553BB9272195FF35003164FC /* NavigationBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
