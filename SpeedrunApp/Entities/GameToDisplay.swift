@@ -15,7 +15,6 @@ struct GameToDisplay {
 }
 
 extension GameToDisplay {
-
 	init (game: Game) {
 		self.id = game.id
 		self.logo = game.logo
@@ -28,5 +27,21 @@ extension Array where Element == Game {
 		return self.map({
 			return GameToDisplay(game: $0)
 		})
+	}
+}
+
+struct GameDetailsToDisplay {
+	let game: GameToDisplay
+	let player: String
+	let time: String
+	let videoURL: URL?
+}
+
+extension GameDetailsToDisplay {
+	init (game: Game, run: Run, player: Player) {
+		self.game = GameToDisplay(game: game)
+		self.player = player.name
+		self.videoURL = run.videoURL
+		self.time = run.time.description
 	}
 }

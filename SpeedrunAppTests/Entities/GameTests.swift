@@ -32,7 +32,10 @@ class GameTests: QuickSpec {
 				let gameDictionary = game.toDictionary()
 
 				expect (gameDictionary["id"] as? String) == "abc123"
-				expect (gameDictionary["abbreviation"] as? String) == "aName"
+
+				if let namesDictionary = try? gameDictionary.valueOf("names") as [String: Any] {
+					expect (namesDictionary["international"] as? String) == "aName"
+				}
 
 				if  let assetsDictionary = try? gameDictionary.valueOf("assets") as [String: Any],
 					let logoDictionary = try? assetsDictionary.valueOf("logo") as [String: Any],

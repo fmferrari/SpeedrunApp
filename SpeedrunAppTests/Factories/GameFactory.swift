@@ -6,7 +6,6 @@
 //  Copyright © 2018 Felipe Ferrari. All rights reserved.
 //
 
-
 import Foundation
 
 @testable import SpeedrunApp

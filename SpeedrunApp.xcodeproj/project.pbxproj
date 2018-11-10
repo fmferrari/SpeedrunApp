@@ -54,6 +54,16 @@
 		553BB9852196FEDB003164FC /* GameDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9812196FEDB003164FC /* GameDetailWireframe.swift */; };
 		553BB98721971B93003164FC /* GameDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98621971B93003164FC /* GameDetailPresenterTests.swift */; };
 		553BB98921971BE2003164FC /* GameDetailWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98821971BE2003164FC /* GameDetailWireframeTests.swift */; };
+		553BB98B21973826003164FC /* FetchRunsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98A21973826003164FC /* FetchRunsInteractor.swift */; };
+		553BB98D21973892003164FC /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98C21973892003164FC /* Run.swift */; };
+		553BB98F21973F05003164FC /* FetchRunsInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98E21973F05003164FC /* FetchRunsInteractorTests.swift */; };
+		553BB99121973F39003164FC /* RunFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99021973F39003164FC /* RunFactory.swift */; };
+		553BB99321974765003164FC /* FetchPlayerForRunInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99221974765003164FC /* FetchPlayerForRunInteractor.swift */; };
+		553BB995219747F9003164FC /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB994219747F9003164FC /* Player.swift */; };
+		553BB9972197494E003164FC /* FetchPlayerForRunInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9962197494E003164FC /* FetchPlayerForRunInteractorTests.swift */; };
+		553BB9992197497A003164FC /* PlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9982197497A003164FC /* PlayerFactory.swift */; };
+		553BB99B2197614B003164FC /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99A2197614B003164FC /* PlayerTests.swift */; };
+		553BB99D219761ED003164FC /* RunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99C219761ED003164FC /* RunTests.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +133,16 @@
 		553BB9812196FEDB003164FC /* GameDetailWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailWireframe.swift; sourceTree = "<group>"; };
 		553BB98621971B93003164FC /* GameDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailPresenterTests.swift; sourceTree = "<group>"; };
 		553BB98821971BE2003164FC /* GameDetailWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailWireframeTests.swift; sourceTree = "<group>"; };
+		553BB98A21973826003164FC /* FetchRunsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRunsInteractor.swift; sourceTree = "<group>"; };
+		553BB98C21973892003164FC /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		553BB98E21973F05003164FC /* FetchRunsInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRunsInteractorTests.swift; sourceTree = "<group>"; };
+		553BB99021973F39003164FC /* RunFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunFactory.swift; sourceTree = "<group>"; };
+		553BB99221974765003164FC /* FetchPlayerForRunInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPlayerForRunInteractor.swift; sourceTree = "<group>"; };
+		553BB994219747F9003164FC /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		553BB9962197494E003164FC /* FetchPlayerForRunInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchPlayerForRunInteractorTests.swift; sourceTree = "<group>"; };
+		553BB9982197497A003164FC /* PlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactory.swift; sourceTree = "<group>"; };
+		553BB99A2197614B003164FC /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
+		553BB99C219761ED003164FC /* RunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTests.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				553BB94521960652003164FC /* FetchGamesInteractor.swift */,
+				553BB98A21973826003164FC /* FetchRunsInteractor.swift */,
+				553BB99221974765003164FC /* FetchPlayerForRunInteractor.swift */,
 			);
 			path = DataFetchers;
 			sourceTree = "<group>";
@@ -294,6 +316,8 @@
 			children = (
 				553BB94821960722003164FC /* Game.swift */,
 				553BB96621961581003164FC /* GameToDisplay.swift */,
+				553BB98C21973892003164FC /* Run.swift */,
+				553BB994219747F9003164FC /* Player.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -334,6 +358,8 @@
 			isa = PBXGroup;
 			children = (
 				553BB95721960CC1003164FC /* GameFactory.swift */,
+				553BB99021973F39003164FC /* RunFactory.swift */,
+				553BB9982197497A003164FC /* PlayerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -360,6 +386,8 @@
 			isa = PBXGroup;
 			children = (
 				553BB95E21960DBA003164FC /* FetchGamesInteractorTests.swift */,
+				553BB98E21973F05003164FC /* FetchRunsInteractorTests.swift */,
+				553BB9962197494E003164FC /* FetchPlayerForRunInteractorTests.swift */,
 			);
 			path = DataFetchers;
 			sourceTree = "<group>";
@@ -376,6 +404,8 @@
 			isa = PBXGroup;
 			children = (
 				553BB96421960F92003164FC /* GameTests.swift */,
+				553BB99A2197614B003164FC /* PlayerTests.swift */,
+				553BB99C219761ED003164FC /* RunTests.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -681,8 +711,12 @@
 				553BB92E2195FFFF003164FC /* AppStyle.swift in Sources */,
 				553BB97421961BD3003164FC /* GamesCollectionView.swift in Sources */,
 				553BB94F2196083A003164FC /* GamesRepository.swift in Sources */,
+				553BB98B21973826003164FC /* FetchRunsInteractor.swift in Sources */,
+				553BB995219747F9003164FC /* Player.swift in Sources */,
+				553BB99321974765003164FC /* FetchPlayerForRunInteractor.swift in Sources */,
 				553BB93621960192003164FC /* SplashWireframe.swift in Sources */,
 				553BB94921960722003164FC /* Game.swift in Sources */,
+				553BB98D21973892003164FC /* Run.swift in Sources */,
 				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
 				553BB97621961BD3003164FC /* GamesCollectionViewCell.swift in Sources */,
 				553BB9852196FEDB003164FC /* GameDetailWireframe.swift in Sources */,
@@ -697,14 +731,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				553BB95521960B61003164FC /* SplashEventsHandlerTests.swift in Sources */,
+				553BB99D219761ED003164FC /* RunTests.swift in Sources */,
 				553BB96221960E5E003164FC /* StubHelper.swift in Sources */,
 				553BB97921962F51003164FC /* HomeWireframeTests.swift in Sources */,
 				553BB96521960F92003164FC /* GameTests.swift in Sources */,
+				553BB99121973F39003164FC /* RunFactory.swift in Sources */,
 				553BB98721971B93003164FC /* GameDetailPresenterTests.swift in Sources */,
 				553BB98921971BE2003164FC /* GameDetailWireframeTests.swift in Sources */,
+				553BB9992197497A003164FC /* PlayerFactory.swift in Sources */,
 				553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */,
 				553BB95821960CC1003164FC /* GameFactory.swift in Sources */,
+				553BB99B2197614B003164FC /* PlayerTests.swift in Sources */,
+				553BB98F21973F05003164FC /* FetchRunsInteractorTests.swift in Sources */,
 				553BB95F21960DBA003164FC /* FetchGamesInteractorTests.swift in Sources */,
+				553BB9972197494E003164FC /* FetchPlayerForRunInteractorTests.swift in Sources */,
 				553BB97C2196310E003164FC /* HomePresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

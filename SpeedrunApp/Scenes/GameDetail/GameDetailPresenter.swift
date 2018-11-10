@@ -12,18 +12,66 @@ import RxSwift
 class GameDetailPresenter: ObserverPresenter {
 	let game : Game
 	let view : GameDetailView
+	let fetchRuns : FetchRuns
+	let fetchPlayerForRun : FetchPlayerForRun
+
+	private let disposeBag: DisposeBag = DisposeBag ()
 
 	init(
 		game: Game,
-		view: GameDetailView
+		view: GameDetailView,
+		fetchRuns : FetchRuns,
+		fetchPlayerForRun : FetchPlayerForRun
 	) {
 		self.view = view
 		self.game = game
+		self.fetchRuns = fetchRuns
+		self.fetchPlayerForRun = fetchPlayerForRun
 	}
 
 	override func subscribeToViewEvents() {
-		let gameToDisplay = GameToDisplay(game: game)
-		view.setGameInformation(gameToDisplay)
+		fetchFirstRun()
+	}
+
+	func fetchFirstRun() {
+		fetchRuns
+			.execute(for: game.id)
+			.subscribe(
+				onNext: {[weak self] runs in
+					guard let run = runs.first
+					else {
+						self?.handleError()
+						return
+					}
+					self?.fetchPlayerNameForRun(run)
+				},
+				onError: { [weak self] _ in
+					self?.handleError()
+				}
+			).disposed(by: disposeBag)
+	}
+
+	func fetchPlayerNameForRun( _ run : Run ) {
+		fetchPlayerForRun.execute(for: run.playerID)
+			.subscribe(
+				onNext: {[weak self] player in
+					guard let game = self?.game
+					else {
+						self?.handleError()
+						return
+					}
+					let gameDetailsToDisplay = GameDetailsToDisplay(game: game, run: run, player: player)
+					self?.view.setGameInformation(gameDetailsToDisplay)
+				},
+				onError: {[weak self] _ in
+					self?.handleError()
+				}
+		).disposed(by: disposeBag)
+	}
+
+	func handleError() {
+		//Hide Loading View
+		//Show Error View
 	}
 }
 

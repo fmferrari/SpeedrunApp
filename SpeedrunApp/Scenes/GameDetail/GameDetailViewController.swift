@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 protocol GameDetailView {
-	func setGameInformation( _ game: GameToDisplay )
+	func setGameInformation( _ gameDetails: GameDetailsToDisplay )
 }
 
 class GameDetailViewController: ObservableViewController, GameDetailView {
@@ -27,9 +27,11 @@ class GameDetailViewController: ObservableViewController, GameDetailView {
 
 	var originalImageView : UIImageView?
 	
-	func setGameInformation(_ game: GameToDisplay) {
-		navigationItem.title = game.name
-		setGameImage(url: game.logo)
+	func setGameInformation(_ gameDetails: GameDetailsToDisplay) {
+		navigationItem.title = gameDetails.game.name
+		setGameImage(url: gameDetails.game.logo)
+		timeLabel.text = gameDetails.time
+		playerLabel.text = gameDetails.player
 		setupBackgroundViews()
 	}
 

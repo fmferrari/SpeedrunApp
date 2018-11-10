@@ -21,7 +21,8 @@ struct Game {
 extension Game: Hashable {
 	init(fromDictionary dictionary: [String : Any]) throws {
 		guard let id = try? dictionary.valueOf("id") as String,
-			  let name = try? dictionary.valueOf("abbreviation") as String,
+			  let namesDictionary = try? dictionary.valueOf("names") as [String: Any],
+			  let name = try? namesDictionary.valueOf("international") as String,
 			  let assetsDictionary = try? dictionary.valueOf("assets") as [String: Any],
 			  let logoDictionary = try? assetsDictionary.valueOf("logo") as [String: Any],
 			  let logoURLString = try? logoDictionary.valueOf("uri") as String,
@@ -35,7 +36,7 @@ extension Game: Hashable {
 	func toDictionary() -> [String : Any] {
 		return [
 			"id": id,
-			"abbreviation": name,
+			"names" : ["international": name] ,
 			"assets" : ["logo" : ["uri": logo.absoluteString]]
 		]
 	}

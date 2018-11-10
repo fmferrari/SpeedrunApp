@@ -16,7 +16,9 @@ class GameDetailWireframe: ObservableViewWireframe<GameDetailPresenter> {
 
 		gameDetailPresenter = GameDetailPresenter(
 			game: game,
-			view: view
+			view: view,
+			fetchRuns: FetchRunsInteractor.withDefaultApi,
+			fetchPlayerForRun: FetchPlayerForRunInteractor.withDefaultApi
 		)
 
 		super.init(navigation: navigation, presenter: gameDetailPresenter)
