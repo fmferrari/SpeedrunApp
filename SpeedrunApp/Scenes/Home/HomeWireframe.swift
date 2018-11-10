@@ -43,6 +43,10 @@ class HomeWireframe: ObservableViewWireframe<HomePresenter> {
 
 extension HomeWireframe: HomeNavigation {
 	func presentGameDetail(game: Game) {
-		
+		let gameDetailWireframe = GameDetailWireframe (
+			navigation: navigation,
+			game: game
+		)
+		try? gameDetailWireframe.push(inWireframe: self)
 	}
 }

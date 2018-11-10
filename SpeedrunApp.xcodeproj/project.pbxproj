@@ -48,6 +48,12 @@
 		553BB97721961BD3003164FC /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97021961BD2003164FC /* HomePresenter.swift */; };
 		553BB97921962F51003164FC /* HomeWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97821962F51003164FC /* HomeWireframeTests.swift */; };
 		553BB97C2196310E003164FC /* HomePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97B2196310E003164FC /* HomePresenterTests.swift */; };
+		553BB9822196FEDB003164FC /* GameDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97E2196FEDB003164FC /* GameDetailPresenter.swift */; };
+		553BB9832196FEDB003164FC /* GameDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB97F2196FEDB003164FC /* GameDetailViewController.swift */; };
+		553BB9842196FEDB003164FC /* GameDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 553BB9802196FEDB003164FC /* GameDetailViewController.xib */; };
+		553BB9852196FEDB003164FC /* GameDetailWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9812196FEDB003164FC /* GameDetailWireframe.swift */; };
+		553BB98721971B93003164FC /* GameDetailPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98621971B93003164FC /* GameDetailPresenterTests.swift */; };
+		553BB98921971BE2003164FC /* GameDetailWireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB98821971BE2003164FC /* GameDetailWireframeTests.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +117,12 @@
 		553BB97021961BD2003164FC /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		553BB97821962F51003164FC /* HomeWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframeTests.swift; sourceTree = "<group>"; };
 		553BB97B2196310E003164FC /* HomePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenterTests.swift; sourceTree = "<group>"; };
+		553BB97E2196FEDB003164FC /* GameDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailPresenter.swift; sourceTree = "<group>"; };
+		553BB97F2196FEDB003164FC /* GameDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailViewController.swift; sourceTree = "<group>"; };
+		553BB9802196FEDB003164FC /* GameDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GameDetailViewController.xib; sourceTree = "<group>"; };
+		553BB9812196FEDB003164FC /* GameDetailWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDetailWireframe.swift; sourceTree = "<group>"; };
+		553BB98621971B93003164FC /* GameDetailPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailPresenterTests.swift; sourceTree = "<group>"; };
+		553BB98821971BE2003164FC /* GameDetailWireframeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailWireframeTests.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +237,7 @@
 		553BB92F21960191003164FC /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				553BB97D2196FEDB003164FC /* GameDetail */,
 				553BB96821961BD2003164FC /* Home */,
 				553BB93021960191003164FC /* Splash */,
 			);
@@ -330,6 +343,7 @@
 			children = (
 				553BB95A21960D5C003164FC /* SplashWireframeTests.swift */,
 				553BB97821962F51003164FC /* HomeWireframeTests.swift */,
+				553BB98821971BE2003164FC /* GameDetailWireframeTests.swift */,
 			);
 			path = Wireframes;
 			sourceTree = "<group>";
@@ -392,8 +406,20 @@
 			isa = PBXGroup;
 			children = (
 				553BB97B2196310E003164FC /* HomePresenterTests.swift */,
+				553BB98621971B93003164FC /* GameDetailPresenterTests.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		553BB97D2196FEDB003164FC /* GameDetail */ = {
+			isa = PBXGroup;
+			children = (
+				553BB97E2196FEDB003164FC /* GameDetailPresenter.swift */,
+				553BB97F2196FEDB003164FC /* GameDetailViewController.swift */,
+				553BB9802196FEDB003164FC /* GameDetailViewController.xib */,
+				553BB9812196FEDB003164FC /* GameDetailWireframe.swift */,
+			);
+			path = GameDetail;
 			sourceTree = "<group>";
 		};
 		9E671DC5F71FDF39624CE1EE /* Pods */ = {
@@ -503,6 +529,7 @@
 			files = (
 				5500FB322195F8DD0079B15C /* LaunchScreen.storyboard in Resources */,
 				553BB93821960192003164FC /* SplashViewController.xib in Resources */,
+				553BB9842196FEDB003164FC /* GameDetailViewController.xib in Resources */,
 				553BB97121961BD3003164FC /* HomeViewController.xib in Resources */,
 				5500FB2F2195F8DD0079B15C /* Assets.xcassets in Resources */,
 				553BB97521961BD3003164FC /* GamesCollectionViewCell.xib in Resources */,
@@ -641,9 +668,11 @@
 				553BB94121960582003164FC /* RxApi.swift in Sources */,
 				553BB96721961581003164FC /* GameToDisplay.swift in Sources */,
 				553BB97321961BD3003164FC /* HomeWireframe.swift in Sources */,
+				553BB9822196FEDB003164FC /* GameDetailPresenter.swift in Sources */,
 				553BB97221961BD3003164FC /* HomeViewController.swift in Sources */,
 				553BB97721961BD3003164FC /* HomePresenter.swift in Sources */,
 				553BB93F21960582003164FC /* SpeedrunApi.swift in Sources */,
+				553BB9832196FEDB003164FC /* GameDetailViewController.swift in Sources */,
 				553BB94621960652003164FC /* FetchGamesInteractor.swift in Sources */,
 				553BB9252195FF35003164FC /* Wireframe.swift in Sources */,
 				553BB9282195FF35003164FC /* ObservableViewWireframe.swift in Sources */,
@@ -656,6 +685,7 @@
 				553BB94921960722003164FC /* Game.swift in Sources */,
 				553BB9292195FF35003164FC /* ObserverPresenter.swift in Sources */,
 				553BB97621961BD3003164FC /* GamesCollectionViewCell.swift in Sources */,
+				553BB9852196FEDB003164FC /* GameDetailWireframe.swift in Sources */,
 				553BB94021960582003164FC /* Api.swift in Sources */,
 				553BB9272195FF35003164FC /* NavigationBar.swift in Sources */,
 				553BB94C2196079C003164FC /* DictionaryHelper.swift in Sources */,
@@ -670,6 +700,8 @@
 				553BB96221960E5E003164FC /* StubHelper.swift in Sources */,
 				553BB97921962F51003164FC /* HomeWireframeTests.swift in Sources */,
 				553BB96521960F92003164FC /* GameTests.swift in Sources */,
+				553BB98721971B93003164FC /* GameDetailPresenterTests.swift in Sources */,
+				553BB98921971BE2003164FC /* GameDetailWireframeTests.swift in Sources */,
 				553BB95B21960D5C003164FC /* SplashWireframeTests.swift in Sources */,
 				553BB95821960CC1003164FC /* GameFactory.swift in Sources */,
 				553BB95F21960DBA003164FC /* FetchGamesInteractorTests.swift in Sources */,
