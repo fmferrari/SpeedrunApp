@@ -29,7 +29,7 @@ class GameDetailPresenterTests: QuickSpec {
 					guard let calledWithID = fetchRuns.executeWasCalledWithID else {
 						fail(); return
 					}
-
+					expect(view.showLoadingViewWasCalled).to(beTrue())
 					expect(calledWithID) == GameFactory.game().id
 				}
 
@@ -48,6 +48,7 @@ class GameDetailPresenterTests: QuickSpec {
 						}
 
 						it("sets the game information to the view") {
+							expect(view.hideLoadingViewWasCalled).to(beTrue())
 							expect(view.setGameInformationWasCalled).to(beTrue())
 						}
 					}
@@ -58,11 +59,11 @@ class GameDetailPresenterTests: QuickSpec {
 						}
 
 						it ("hides loading view" ) {
-							fail()
+							expect(view.hideLoadingViewWasCalled).to(beTrue())
 						}
 
 						it ("displays error view" ) {
-							fail()
+							expect(view.showErrorViewWasCalled).to(beTrue())
 						}
 					}
 				}
@@ -73,11 +74,11 @@ class GameDetailPresenterTests: QuickSpec {
 					}
 
 					it ("hides loading view" ) {
-						fail()
+						expect(view.hideLoadingViewWasCalled).to(beTrue())
 					}
 
 					it ("displays error view" ) {
-						fail()
+						expect(view.showErrorViewWasCalled).to(beTrue())
 					}
 				}
 			}
@@ -111,6 +112,26 @@ class GameDetailViewMock: GameDetailView {
 	var setGameInformationWasCalled = false
 	func setGameInformation(_ gameDetails: GameDetailsToDisplay) {
 		setGameInformationWasCalled = true
+	}
+
+	var showErrorViewWasCalled = false
+	func showErrorView() {
+		showErrorViewWasCalled = true
+	}
+
+	var showLoadingViewWasCalled = false
+	func showLoadingView() {
+		showLoadingViewWasCalled = true
+	}
+
+	var hideErrorViewWasCalled = false
+	func hideErrorView() {
+		hideErrorViewWasCalled = true
+	}
+
+	var hideLoadingViewWasCalled = false
+	func hideLoadingView() {
+		hideLoadingViewWasCalled = true
 	}
 }
 

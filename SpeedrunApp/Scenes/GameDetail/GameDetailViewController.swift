@@ -10,6 +10,10 @@ import Kingfisher
 
 protocol GameDetailView {
 	func setGameInformation( _ gameDetails: GameDetailsToDisplay )
+	func showLoadingView ()
+	func showErrorView ()
+	func hideErrorView ()
+	func hideLoadingView ()
 }
 
 class GameDetailViewController: ObservableViewController, GameDetailView {
@@ -24,7 +28,10 @@ class GameDetailViewController: ObservableViewController, GameDetailView {
 	@IBOutlet weak var timeLabel: UILabel!
 	@IBOutlet weak var playerLabel: UILabel!
 	@IBOutlet weak var goToVideoLabel: UILabel!
-
+	@IBOutlet weak var loadingView: UIView!
+	@IBOutlet weak var errorView: UIView!
+	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+	
 	var originalImageView : UIImageView?
 	
 	func setGameInformation(_ gameDetails: GameDetailsToDisplay) {
@@ -51,5 +58,25 @@ class GameDetailViewController: ObservableViewController, GameDetailView {
 			sSelf.gameImageViewHeightConstraint.constant = (UIScreen.main.bounds.width - 32) * ratio
 			sSelf.view.layoutSubviews()
 		}
+	}
+
+	func showLoadingView() {
+		loadingView.isHidden = false
+		activityIndicator.startAnimating()
+		view.bringSubviewToFront(loadingView)
+	}
+
+	func hideLoadingView() {
+		loadingView.isHidden = true
+		activityIndicator.stopAnimating()
+	}
+
+	func showErrorView() {
+		errorView.isHidden = false
+		view.bringSubviewToFront(errorView)
+	}
+
+	func hideErrorView() {
+		errorView.isHidden = true
 	}
 }

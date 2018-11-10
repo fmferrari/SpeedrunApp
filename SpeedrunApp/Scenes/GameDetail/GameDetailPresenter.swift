@@ -30,6 +30,7 @@ class GameDetailPresenter: ObserverPresenter {
 	}
 
 	override func subscribeToViewEvents() {
+		view.showLoadingView()
 		fetchFirstRun()
 	}
 
@@ -61,6 +62,7 @@ class GameDetailPresenter: ObserverPresenter {
 						return
 					}
 					let gameDetailsToDisplay = GameDetailsToDisplay(game: game, run: run, player: player)
+					self?.view.hideLoadingView()
 					self?.view.setGameInformation(gameDetailsToDisplay)
 				},
 				onError: {[weak self] _ in
@@ -70,8 +72,8 @@ class GameDetailPresenter: ObserverPresenter {
 	}
 
 	func handleError() {
-		//Hide Loading View
-		//Show Error View
+		view.hideLoadingView()
+		view.showErrorView()
 	}
 }
 
