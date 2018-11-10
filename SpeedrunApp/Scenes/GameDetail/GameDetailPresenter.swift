@@ -9,29 +9,49 @@
 import Foundation
 import RxSwift
 
+protocol GameDetailNavigation: class {
+	func openURL( _ url: URL)
+}
+
 class GameDetailPresenter: ObserverPresenter {
 	let game : Game
+	var run: Run?
 	let view : GameDetailView
 	let fetchRuns : FetchRuns
 	let fetchPlayerForRun : FetchPlayerForRun
+	let viewEventsEmitter: GameDetailViewEventsEmitter
+	weak var navigation : GameDetailNavigation?
 
 	private let disposeBag: DisposeBag = DisposeBag ()
 
 	init(
 		game: Game,
 		view: GameDetailView,
+		viewEventsEmitter: GameDetailViewEventsEmitter,
 		fetchRuns : FetchRuns,
 		fetchPlayerForRun : FetchPlayerForRun
 	) {
 		self.view = view
+		self.viewEventsEmitter = viewEventsEmitter
 		self.game = game
 		self.fetchRuns = fetchRuns
 		self.fetchPlayerForRun = fetchPlayerForRun
 	}
 
 	override func subscribeToViewEvents() {
+		subscribeToGoToVideoTappedObservable()
 		view.showLoadingView()
 		fetchFirstRun()
+	}
+
+	func subscribeToGoToVideoTappedObservable() {
+		viewEventsEmitter.goToVideoTappedObservable
+			.subscribe(onNext: { [weak self] _ in
+				guard let videoURL = self?.run?.videoURL,
+					UIApplication.shared.canOpenURL(videoURL)
+					else { return }
+				self?.navigation?.openURL(videoURL)
+			}).disposed(by: disposeBag)
 	}
 
 	func fetchFirstRun() {
@@ -44,6 +64,7 @@ class GameDetailPresenter: ObserverPresenter {
 						self?.handleError()
 						return
 					}
+					self?.run = run
 					self?.fetchPlayerNameForRun(run)
 				},
 				onError: { [weak self] _ in

@@ -7,6 +7,8 @@
 
 import UIKit
 import Kingfisher
+import RxSwift
+import RxCocoa
 
 protocol GameDetailView {
 	func setGameInformation( _ gameDetails: GameDetailsToDisplay )
@@ -16,7 +18,13 @@ protocol GameDetailView {
 	func hideLoadingView ()
 }
 
-class GameDetailViewController: ObservableViewController, GameDetailView {
+protocol GameDetailViewEventsEmitter {
+	var goToVideoTappedObservable: Observable<NSNull> { get }
+}
+
+class GameDetailViewController: ObservableViewController, GameDetailView, GameDetailViewEventsEmitter {
+
+	let disposeBag = DisposeBag()
 
 	@IBOutlet weak var gameImageViewHeightConstraint: NSLayoutConstraint!
 	@IBOutlet weak var bottomInformationViewTopConstraint: NSLayoutConstraint!
@@ -33,13 +41,39 @@ class GameDetailViewController: ObservableViewController, GameDetailView {
 	@IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 	
 	var originalImageView : UIImageView?
-	
+
+	var goToVideoTappedObservable: Observable<NSNull> { return _goToVideoTappedObservable }
+	var _goToVideoTappedObserver : AnyObserver<NSNull>?
+	var _goToVideoTappedObservable: Observable<NSNull>!
+
+	override func viewDidLoad() {
+		createGoToVideoTappedObservable()
+		super.viewDidLoad()
+	}
+
 	func setGameInformation(_ gameDetails: GameDetailsToDisplay) {
 		navigationItem.title = gameDetails.game.name
 		setGameImage(url: gameDetails.game.logo)
 		timeLabel.text = gameDetails.time
 		playerLabel.text = gameDetails.player
 		setupBackgroundViews()
+		setupGoToVideoButton()
+	}
+
+	func createGoToVideoTappedObservable () {
+		_goToVideoTappedObservable = Observable.create { [weak self] observer in
+			self?._goToVideoTappedObserver = observer
+			return Disposables.create()
+		}.share()
+	}
+
+	func setupGoToVideoButton() {
+		let tapGR = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
+		goToVideoView.addGestureRecognizer(tapGR)
+	}
+
+	@objc func tapHandler(gesture: UITapGestureRecognizer) {
+		_goToVideoTappedObserver?.onNext(NSNull())
 	}
 
 	func setupBackgroundViews() {

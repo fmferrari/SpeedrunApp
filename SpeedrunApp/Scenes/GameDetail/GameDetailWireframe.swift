@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class GameDetailWireframe: ObservableViewWireframe<GameDetailPresenter> {
 	let gameDetailPresenter : GameDetailPresenter
@@ -17,16 +18,23 @@ class GameDetailWireframe: ObservableViewWireframe<GameDetailPresenter> {
 		gameDetailPresenter = GameDetailPresenter(
 			game: game,
 			view: view,
+			viewEventsEmitter: view,
 			fetchRuns: FetchRunsInteractor.withDefaultApi,
 			fetchPlayerForRun: FetchPlayerForRunInteractor.withDefaultApi
 		)
 
 		super.init(navigation: navigation, presenter: gameDetailPresenter)
-
+		presenter.navigation = self
 		viewController = view
 	}
 
 	required init(navigation: Navigation) {
 		fatalError("init(navigation:) has not been implemented")
+	}
+}
+
+extension GameDetailWireframe: GameDetailNavigation {
+	func openURL ( _ url: URL ) {
+		UIApplication.shared.open(url, options: [:], completionHandler: nil)
 	}
 }

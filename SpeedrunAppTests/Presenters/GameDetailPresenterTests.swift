@@ -18,7 +18,7 @@ class GameDetailPresenterTests: QuickSpec {
 	override func spec() {
 
 		context("when the presenter is created") {
-			let (presenter, view, fetchRuns, fetchPlayerForRun) = createPresenter()
+			let (presenter, view, eventsEmitter, fetchRuns, fetchPlayerForRun, navigation) = createPresenter()
 
 			context("when subscribeToViewEvents is called") {
 				beforeEach {
@@ -50,6 +50,16 @@ class GameDetailPresenterTests: QuickSpec {
 						it("sets the game information to the view") {
 							expect(view.hideLoadingViewWasCalled).to(beTrue())
 							expect(view.setGameInformationWasCalled).to(beTrue())
+						}
+
+						context ("when go to video is tapped ") {
+							beforeEach {
+								eventsEmitter.goToVideoTappedObserver.onNext(NSNull())
+							}
+
+							it("calls navigation to open URL") {
+								expect(navigation.openURLWasCalledWithURL).notTo(beNil())
+							}
 						}
 					}
 
@@ -90,20 +100,27 @@ class GameDetailPresenterTests: QuickSpec {
 	(
 		GameDetailPresenter,
 		GameDetailViewMock,
+		GameDetailViewEventsEmitterDouble,
 		FetchRunsMock,
-		FetchPlayerForRunMock
+		FetchPlayerForRunMock,
+		GameDetailNavigationMock
 	) {
 			let view = GameDetailViewMock()
+			let eventsEmitter = GameDetailViewEventsEmitterDouble()
 			let fetchRuns = FetchRunsMock()
 			let fetchPlayerForRun = FetchPlayerForRunMock()
+			let navigation = GameDetailNavigationMock()
 			let presenter = GameDetailPresenter(
 				game: GameFactory.game(),
 				view: view,
+				viewEventsEmitter: eventsEmitter,
 				fetchRuns: fetchRuns,
 				fetchPlayerForRun: fetchPlayerForRun
 			)
 
-			return (presenter, view, fetchRuns, fetchPlayerForRun )
+			presenter.navigation = navigation
+
+			return (presenter, view, eventsEmitter, fetchRuns, fetchPlayerForRun, navigation )
 	}
 }
 
@@ -160,5 +177,25 @@ class FetchPlayerForRunMock: FetchPlayerForRun {
 			self.returnObserver = observer
 			return Disposables.create()
 		}
+	}
+}
+
+class GameDetailViewEventsEmitterDouble: GameDetailViewEventsEmitter {
+	var goToVideoTappedObservable: Observable<NSNull> { return _goToVideoTappedObservable }
+	var goToVideoTappedObserver : AnyObserver<NSNull>!
+	private var _goToVideoTappedObservable: Observable<NSNull>!
+
+	init () {
+		_goToVideoTappedObservable = Observable.create() { observer in
+			self.goToVideoTappedObserver = observer
+			return Disposables.create()
+		}
+	}
+}
+
+class GameDetailNavigationMock: GameDetailNavigation {
+	var openURLWasCalledWithURL: URL?
+	func openURL ( _ url: URL ) {
+		openURLWasCalledWithURL = url
 	}
 }
