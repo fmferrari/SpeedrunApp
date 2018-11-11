@@ -64,6 +64,7 @@
 		553BB9992197497A003164FC /* PlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB9982197497A003164FC /* PlayerFactory.swift */; };
 		553BB99B2197614B003164FC /* PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99A2197614B003164FC /* PlayerTests.swift */; };
 		553BB99D219761ED003164FC /* RunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553BB99C219761ED003164FC /* RunTests.swift */; };
+		55851D852198B70900126B74 /* URLHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55851D842198B70900126B74 /* URLHelper.swift */; };
 		E7A86041EA391D90D1613A02 /* Pods_SpeedrunAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 434120A7862E7657479E49C6 /* Pods_SpeedrunAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +144,7 @@
 		553BB9982197497A003164FC /* PlayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerFactory.swift; sourceTree = "<group>"; };
 		553BB99A2197614B003164FC /* PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTests.swift; sourceTree = "<group>"; };
 		553BB99C219761ED003164FC /* RunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunTests.swift; sourceTree = "<group>"; };
+		55851D842198B70900126B74 /* URLHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLHelper.swift; sourceTree = "<group>"; };
 		7BC0E90A970B17C98C042F70 /* Pods-SpeedrunApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedrunApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedrunApp/Pods-SpeedrunApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -326,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				553BB94B2196079C003164FC /* DictionaryHelper.swift */,
+				55851D842198B70900126B74 /* URLHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -691,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				553BB92B2195FF35003164FC /* BaseNavigationController.swift in Sources */,
+				55851D852198B70900126B74 /* URLHelper.swift in Sources */,
 				553BB9262195FF35003164FC /* Navigation.swift in Sources */,
 				553BB93521960192003164FC /* SplashEventsHandler.swift in Sources */,
 				553BB93721960192003164FC /* SplashViewController.swift in Sources */,

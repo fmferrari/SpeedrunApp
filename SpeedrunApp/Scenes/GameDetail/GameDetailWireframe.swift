@@ -35,6 +35,6 @@ class GameDetailWireframe: ObservableViewWireframe<GameDetailPresenter> {
 
 extension GameDetailWireframe: GameDetailNavigation {
 	func openURL ( _ url: URL ) {
-		UIApplication.shared.open(url, options: [:], completionHandler: nil)
+		url.handleVideoURL()
 	}
 }
