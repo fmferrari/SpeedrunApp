@@ -32,7 +32,7 @@ class HomeViewController:
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		navigationItem.title = "Speedruns"
+		navigationItem.title = "Games"
 	}
 	
 	func setGames( _ games: [GameToDisplay] ) {
