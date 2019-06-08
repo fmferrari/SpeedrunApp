@@ -2,8 +2,8 @@
 
 Features
 
-Written in swift
-Clean architecture using VIPER as design pattern.
+Grid with detail app model written in swift, with 
+an approach of VIPER architecture as design pattern.
 RxSwift in order to build the reactive architecture.
 Alamofire for HTTP requests.
 Quick, Nimble, Mockingjay for unit testing.
